@@ -1,0 +1,26 @@
+
+<div ng-include = "'views/templates/nav.html'"></div>
+<h2>Enter Hero</h2>
+<form id = "heroForm">
+  <label for = "alias">Alias:</label>
+  <input type = "text" id = "alias" ng-model = "alias" />
+  <label for = "last_name">Last Name:</label>
+  <input type = "text" id = "last_name" ng-model = "last_name" />
+  <label for = "first_name">First Name:</label>
+  <input type = "text" id = "first_name" ng-model = "first_name" />
+  <label for = "city">City:</label>
+  <input type = "text" id = "city" ng-model = "city" />
+
+  <select name = "primaryPowerList" ng-model = "primary_power">
+  <option value "" selected = "selected">Hero Power:</option>
+        <option value = "speed">Speed</option>
+        <option value = "flight">Flight</option>
+        <option value = "invisibility">Invisibility</option>
+        <option value = "regeneration">Regeneration</option>
+        <option value = "wealth">Immense Wealth</option>
+        <option value = "time">Manipulates Time</option>
+        <option value = "genius">Smarts</option>
+  </select>
+  <button id="submit" ng-click="addHero()">Add Hero</button>
+  <!-- <input type = "submit" ng-click = "addHero()" /> -->
+</form>

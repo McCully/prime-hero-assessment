@@ -1,0 +1,13 @@
+<div class = "herolisting">
+  <div ng-include = "'views/templates/nav.html'"></div>
+  <h1>Hero Directory</h1>
+  <div ng-repeat = "hero in heros">
+    <h4>Alias: {{hero.alias}}</h4>
+    <h4>First Name: {{hero.first_name}}</h4>
+    <h4>last Name: {{hero.last_name}}</h4>
+    <h4>City of origin: {{hero.city}}</h4>
+    <h4>Power: {{hero.primary_power}}</h4>
+    <button ng-click = "deleteHero(hero._id)">Delete Hero</button>
+  </div>
+</div>
+<p>{{deleted}}</p>
