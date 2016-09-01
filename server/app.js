@@ -6,9 +6,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 /** ---------- OUR MODULES ---------- **/
-var heroDel = require('./routes/heroDel');
-var heroGet = require('./routes/heroGet');
-var heroMk = require('./routes/heroMk');
+var data = require('./routes/data.js')
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(express.static(path.join(__dirname, './public')));
@@ -19,9 +17,7 @@ app.get('/', function(req, res) {
 })
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.use('/heroGet', heroGet);
-app.use('/' , heroDel);
-app.use('/' , heroMk)
+app.use('/data', data)
 /** ---------- MONGOOSE CONNECTION HANDLING ---------- **/
 var databaseUri = 'mongodb://localhost:27017/omicron';
 mongoose.connect(databaseUri);

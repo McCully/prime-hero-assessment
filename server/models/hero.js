@@ -7,7 +7,7 @@ var heroSchema = new Schema({
   first_name: String,
   last_name: String,
   city: String,
-  power_name: String
+  primary_power: String
 });
 
 var Hero = mongoose.model('Hero' , heroSchema);

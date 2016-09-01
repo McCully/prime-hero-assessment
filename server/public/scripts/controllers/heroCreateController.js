@@ -17,7 +17,7 @@ myApp.controller('heroCreateController' , ['$scope' , '$http', function($scope ,
       primary_power: $scope.primary_power
     };
 
-    $http.post('/', hero).then(function(response) {
+    $http.post('/data', hero).then(function(response) {
       console.log("post data??" , $scope.primary_power);
       $scope.alias = '';
       $scope.first_name = '';
